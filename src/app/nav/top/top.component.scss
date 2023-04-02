@@ -1,0 +1,45 @@
+// variabel warna
+$nav-color: #2ec598;
+$nav-link-color: #fff;
+$nav-link-hover-color: #ccc;
+
+// styling untuk top navbar
+.navbar {
+  background-color: $nav-color;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+// styling untuk menu link
+.navbar-link {
+  color: $nav-link-color;
+  text-decoration: none;
+  margin-right: 50px;
+  font-size: 18px;
+  &:hover {
+    color: $nav-link-hover-color;
+  }
+}
+
+// styling untuk menu link yang aktif
+.navbar-link-active {
+  color: $nav-link-hover-color;
+  font-weight: bold;
+}
+
+// styling untuk menu link group
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 100px;
+  
+}
+
+// styling untuk menu link item
+.navbar-links-item {
+  margin-left: 10px;
+}
