@@ -11,9 +11,9 @@ import { FaqComponent } from './homepage/faq/faq.component';
 
 
 const routes: Routes = [ 
-  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  // { path: '', redirectTo: '#', pathMatch: 'full'},
   // { path: '**', redirectTo: 'home', pathMatch: 'full'},
-  { path: 'home',         component: HomepageComponent},
+  { path: '',         component: HomepageComponent},
   { path: 'about',        component: AboutComponent},
   { path: 'contact',      component: ContactComponent},
   { path: 'services',     component: ServicesComponent},
