@@ -1,10 +1,28 @@
-  <div class="container my-5">
-    <div class="row">
-      <div class="col-md-2 bg-primary">Kolom 1</div>
-      <div class="col-md-2 bg-secondary">Kolom 2</div>
-      <div class="col-md-2 bg-success">Kolom 3</div>
-      <div class="col-md-2 bg-danger">Kolom 4</div>
-      <div class="col-md-2 bg-warning">Kolom 5</div>
-    </div>
-  </div>
-  
+<h2>Dashboard Mahasiswa</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Nama</th>
+      <th>NIM</th>
+      <th>Alamat</th>
+      <th>Jenis Kelamin</th>
+      <th>Program Studi</th>
+      <th>Fakultas</th>
+      <th>Aksi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let mahasiswa of mahasiswa">
+      <td>{{ mahasiswa.nama }}</td>
+      <td>{{ mahasiswa.nim }}</td>
+      <td>{{ mahasiswa.alamat }}</td>
+      <td>{{ mahasiswa.jenisKelamin }}</td>
+      <td>{{ mahasiswa.programStudi }}</td>
+      <td>{{ mahasiswa.fakultas }}</td>
+      <td>
+        <button (click)="editMahasiswa(mahasiswa)">Edit</button>
+        <button (click)="deleteMahasiswa(mahasiswa)">Hapus</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

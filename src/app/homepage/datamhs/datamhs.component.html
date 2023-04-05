@@ -1,6 +1,6 @@
 <div class="container">
     <h1>Form Input Data Mahasiswa</h1>
-    <form>
+    <form (ngSubmit)="onSubmit()" #mahasiswaForm="ngForm">
       <div class="form-group">
         <label for="nama">Nama:</label>
         <input type="text" class="form-control" id="nama" [(ngModel)]="datamhs.nama" name="nama" required>
@@ -28,7 +28,7 @@
         <label for="fakultas">Fakultas:</label>
         <input type="text" class="form-control" id="fakultas" [(ngModel)]="datamhs.fakultas" name="fakultas" required>
       </div>
-      <button type="submit" class="btn btn-primary" (click)="simpanForm()">Simpan</button>
+      <button type="submit" class="btn btn-primary">Simpan</button>
     </form>
   </div>
   
