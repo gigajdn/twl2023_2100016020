@@ -1,4 +1,4 @@
-export class datamhs {
+export class Mahasiswa {
     id: string;
     nama: string;
     nim: string;
@@ -7,7 +7,7 @@ export class datamhs {
     programStudi: string;
     fakultas: string;
   
-    constructor(id: string, nama: string, nim: string, alamat: string, jenisKelamin: string, programStudi: string, fakultas: string) {
+    constructor(id: string, nama:string, nim: string, alamat: string, jenisKelamin: string, programStudi: string, fakultas: string) {
       this.id = id;
       this.nama = nama;
       this.nim = nim;

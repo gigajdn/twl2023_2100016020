@@ -5,23 +5,27 @@ import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
-import { HomepageComponent } from './homepage/homepage.component';
-import { HomepageModule } from './homepage/homepage.module';
+// import { HomepageComponent } from './homepage/homepage.component';
+// import { HomepageModule } from './homepage/homepage.module';
 import { TopComponent } from './nav/top/top.component';
+import { DashboardComponent } from './homepage/dashboard/dashboard.component';
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent,
+    // HomepageComponent,
     TopComponent,
+    DashboardComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    HomepageModule,
+    // HomepageModule,
     FormsModule
   ],
   providers: [],
