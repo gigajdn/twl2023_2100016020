@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 // import { HomepageModule } from './homepage/homepage.module';
 import { TopComponent } from './nav/top/top.component';
 import { DashboardComponent } from './homepage/dashboard/dashboard.component';
+import { FDataComponent } from './homepage/f-data/f-data.component';
 
 
 
@@ -19,6 +20,7 @@ import { DashboardComponent } from './homepage/dashboard/dashboard.component';
     // HomepageComponent,
     TopComponent,
     DashboardComponent,
+    FDataComponent,
 
   ],
   imports: [

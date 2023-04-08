@@ -1,0 +1,26 @@
+
+ 
+  {
+    "mhs": [
+      {
+        "id": 1,
+        "nama": "John Doe",
+        "nim": 1234567890,
+        "alamat": "Jl. Jend. Sudirman No. 123",
+        "jenisKelamin": "Laki-laki",
+        "programStudi": "Teknik Informatika",
+        "fakultas": "Teknik"
+      },
+      {
+        "id": 1,
+        "nama": "John Doe",
+        "nim": 12343567890,
+        "alamat": "Jl. Jend. Sudirman No. 123",
+        "jenisKelamin": "Laki-laki",
+        "programStudi": "Teknik Informatika",
+        "fakultas": "Teknik"
+      }
+    ]
+  }
+
+  
