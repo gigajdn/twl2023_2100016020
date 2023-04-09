@@ -1,0 +1,39 @@
+<!-- Form untuk menambahkan data mahasiswa -->
+<div class="card mt-4">
+    <div class="card-header">
+      Tambah Data Mahasiswa
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #mahasiswaForm="ngForm">
+        <div class="form-group">
+          <label for="nama">Nama</label>
+          <input type="text" class="form-control" id="nama" name="nama" [(ngModel)]="mahasiswa.nama" required>
+        </div>
+        <div class="form-group">
+          <label for="nim">NIM</label>
+          <input type="text" class="form-control" id="nim" name="nim" [(ngModel)]="mahasiswa.nim" required>
+        </div>
+        <div class="form-group">
+          <label for="alamat">Alamat</label>
+          <input type="text" class="form-control" id="alamat" name="alamat" [(ngModel)]="mahasiswa.alamat" required>
+        </div>
+        <div class="form-group">
+          <label for="jenisKelamin">Jenis Kelamin</label>
+          <select class="form-control" id="jenisKelamin" name="jenisKelamin" [(ngModel)]="mahasiswa.jenisKelamin" required>
+            <option value="Laki-laki">Laki-laki</option>
+            <option value="Perempuan">Perempuan</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="programStudi">Program Studi</label>
+          <input type="text" class="form-control" id="programStudi" name="programStudi" [(ngModel)]="mahasiswa.programStudi" required>
+        </div>
+        <div class="form-group">
+          <label for="fakultas">Fakultas</label>
+          <input type="text" class="form-control" id="fakultas" name="fakultas" [(ngModel)]="mahasiswa.fakultas" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Tambah Data</button>
+      </form>
+    </div>
+  </div>
+  

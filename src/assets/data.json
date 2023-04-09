@@ -1,24 +1,40 @@
-  {
-    "mhs": [
-      {
-        "id": 1,
-        "nama": "John Doe",
-        "nim": 1234567890,
-        "alamat": "Jl. Jend. Sudirman No. 123",
-        "jenisKelamin": "Laki-laki",
-        "programStudi": "Teknik Informatika",
-        "fakultas": "Teknik"
-      },
-      {
-        "id": 1,
-        "nama": "John Doe",
-        "nim": 12343567890,
-        "alamat": "Jl. Jend. Sudirman No. 123",
-        "jenisKelamin": "Laki-laki",
-        "programStudi": "Teknik Informatika",
-        "fakultas": "Teknik"
-      }
-    ]
-  }
-
-  
+{
+  "mhs": [
+    {
+      "id": 1,
+      "nama": "John Doe",
+      "nim": 1234567890,
+      "alamat": "Jl. Jend. Sudirman No. 123",
+      "jenisKelamin": "Laki-laki",
+      "programStudi": "Teknik Informatika",
+      "fakultas": "Teknik"
+    },
+    {
+      "id": 1,
+      "nama": "John Doe",
+      "nim": 12343567890,
+      "alamat": "Jl. Jend. Sudirman No. 123",
+      "jenisKelamin": "Laki-laki",
+      "programStudi": "Teknik Informatika",
+      "fakultas": "Teknik"
+    },
+    {
+      "nama": "Sukadi",
+      "nim": "214154",
+      "alamat": "Jawa Tengah",
+      "jenisKelamin": "Perempuan",
+      "programStudi": "Teknik",
+      "fakultas": "sains",
+      "id": 2
+    },
+    {
+      "nama": "wgwe",
+      "nim": "wetwe",
+      "alamat": "twqetwe",
+      "jenisKelamin": "Laki-laki",
+      "programStudi": "twegw",
+      "fakultas": "werwer",
+      "id": 3
+    }
+  ]
+}
