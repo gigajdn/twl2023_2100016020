@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 // import { HomepageComponent } from './homepage/homepage.component';
 // import { HomepageModule } from './homepage/homepage.module';
@@ -28,7 +29,8 @@ import { FDataComponent } from './homepage/f-data/f-data.component';
     AppRoutingModule,
     RouterModule,
     // HomepageModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
