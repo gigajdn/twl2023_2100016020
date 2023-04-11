@@ -9,6 +9,7 @@ import { FaqComponent } from './homepage/faq/faq.component';
 import { DashboardComponent } from './homepage/dashboard/dashboard.component';
 import { FDataComponent } from './homepage/f-data/f-data.component';
 import { DataComponent } from './homepage/data/data.component';
+import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [ 
   // { path: '', redirectTo: '#', pathMatch: 'full'},
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'services',     component: ServicesComponent},
   { path: 'faq',          component: FaqComponent},
   { path: 'mhs',          component:FDataComponent},
-  { path: 'formulir',     component:DataComponent}
+  { path: 'formulir',     component:DataComponent},
+  { path: 'product',      component:ProductComponent}
 ];
 
 @NgModule({

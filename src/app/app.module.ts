@@ -12,6 +12,7 @@ import { TopComponent } from './nav/top/top.component';
 import { DashboardComponent } from './homepage/dashboard/dashboard.component';
 import { FDataComponent } from './homepage/f-data/f-data.component';
 import { DataComponent } from './homepage/data/data.component';
+import { ProductComponent } from './product/product.component';
 
 
 
@@ -24,6 +25,7 @@ import { DataComponent } from './homepage/data/data.component';
     DashboardComponent,
     FDataComponent,
     DataComponent,
+    ProductComponent,
 
   ],
   imports: [
