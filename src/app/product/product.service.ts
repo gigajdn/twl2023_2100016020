@@ -30,4 +30,12 @@ export class ProductService {
   deleteProduct(id: number): Observable<Product> {
     return this.http.delete<Product>(`${this.url}/${id}`);
   }
+  reIndexProducts(products: Product[]): Product[] {
+    return products.map((product, index) => {
+      return {
+        ...product,
+        id: index + 1
+      };
+    });
+  } 
 }
