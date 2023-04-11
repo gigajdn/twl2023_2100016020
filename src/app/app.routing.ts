@@ -12,8 +12,6 @@ import { DataComponent } from './homepage/data/data.component';
 import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [ 
-  // { path: '', redirectTo: '#', pathMatch: 'full'},
-  // { path: '**', redirectTo: 'home', pathMatch: 'full'},
   { path: '', redirectTo: '/product', pathMatch: 'full' },
   { path: 'dashboard',    component: DashboardComponent },
   { path: 'about',        component: AboutComponent},
