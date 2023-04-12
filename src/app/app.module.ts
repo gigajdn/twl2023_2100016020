@@ -9,9 +9,6 @@ import { HttpClientModule } from '@angular/common/http';
 // import { HomepageComponent } from './homepage/homepage.component';
 // import { HomepageModule } from './homepage/homepage.module';
 import { TopComponent } from './nav/top/top.component';
-import { DashboardComponent } from './homepage/dashboard/dashboard.component';
-import { FDataComponent } from './homepage/f-data/f-data.component';
-import { DataComponent } from './homepage/data/data.component';
 import { ProductComponent } from './product/product.component';
 
 
@@ -20,11 +17,7 @@ import { ProductComponent } from './product/product.component';
 @NgModule({
   declarations: [
     AppComponent,
-    // HomepageComponent,
     TopComponent,
-    DashboardComponent,
-    FDataComponent,
-    DataComponent,
     ProductComponent,
 
   ],
@@ -32,7 +25,6 @@ import { ProductComponent } from './product/product.component';
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    // HomepageModule,
     FormsModule,
     HttpClientModule
   ],
