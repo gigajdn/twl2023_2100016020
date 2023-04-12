@@ -16,7 +16,7 @@ import { ExampleService } from './example.service';
   styleUrls: ['./example.component.scss']
 })
 export class ExampleComponent {
-  title = 'My App';
+  title = 'JSON Example';
   data: any;
 
   constructor(private exampleService: ExampleService) {}
