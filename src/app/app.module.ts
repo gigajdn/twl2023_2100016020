@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 // import { HomepageModule } from './homepage/homepage.module';
 import { TopComponent } from './nav/top/top.component';
 import { ProductComponent } from './product/product.component';
+import { ExampleComponent } from './homepage/example/example.component';
 
 
 
@@ -19,6 +20,7 @@ import { ProductComponent } from './product/product.component';
     AppComponent,
     TopComponent,
     ProductComponent,
+    ExampleComponent,
 
   ],
   imports: [
