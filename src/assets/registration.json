@@ -1,0 +1,22 @@
+{
+  "registration": [
+    {
+      "name": "Beras",
+      "email": "1234",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "country": "eryerherh",
+      "termsAgreed": true,
+      "id": 1
+    },
+    {
+      "name": "Beras",
+      "email": "1234",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "country": "eryerherh",
+      "termsAgreed": true,
+      "id": 2
+    }
+  ]
+}

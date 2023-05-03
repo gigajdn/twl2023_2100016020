@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { TopComponent } from './nav/top/top.component';
 import { ProductComponent } from './product/product.component';
 import { ExampleComponent } from './homepage/example/example.component';
+import { RegistrasiComponent } from './registrasi/registrasi.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 
 
@@ -20,6 +22,8 @@ import { ExampleComponent } from './homepage/example/example.component';
     TopComponent,
     ProductComponent,
     ExampleComponent,
+    RegistrasiComponent,
+    RegistrationComponent,
 
   ],
   imports: [

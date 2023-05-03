@@ -1,0 +1,29 @@
+<form (ngSubmit)="isEdit ? updateProduct() : addProduct()">
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="registrasi.name" name="name" required>
+  
+    <label>Email:</label>
+    <input type="email" [(ngModel)]="registrasi.email" name="email" required>
+  
+    <label>Password:</label>
+    <input type="password" [(ngModel)]="registrasi.password" name="password" required>
+  
+    <label>Confirm Password:</label>
+    <input type="password" [(ngModel)]="registrasi.confirmPassword" name="confirmPassword" required>
+  
+    <label>Country:</label>
+    <select [(ngModel)]="registrasi.country" name="country" required>
+      <option value="">--Select a country--</option>
+      <option value="USA">USA</option>
+      <option value="Canada">Canada</option>
+      <option value="Mexico">Mexico</option>
+    </select>
+  
+    <label>
+      <input type="checkbox" [(ngModel)]="registrasi.termsAgreed" name="termsAgreed" required>
+      I agree to the terms and conditions
+    </label>
+  
+    <button type="submit">{{ isEdit ? 'Update' : 'Registrasi' }}</button>
+  </form>
+  
