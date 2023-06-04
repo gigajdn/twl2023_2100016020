@@ -6,7 +6,7 @@ import { RegistrasiService } from './registrasi.service';
 @Component({
   selector: 'app-registrasi',
   templateUrl: './registrasi.component.html',
-  styleUrls: ['./registrasi.component.css']
+  styleUrls: ['./registrasi.component.scss']
 })
 export class RegistrasiComponent implements OnInit {
   registrasis: Registrasi[] = [];
