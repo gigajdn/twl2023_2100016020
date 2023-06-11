@@ -27,14 +27,34 @@
     </div>
   </nav> -->
 
-  <nav class="navbar">
-    <a routerLink="/" class="navbar-link">Home</a>
-    <div class="navbar-links">
-      <a routerLink="/input" class="navbar-link" routerLinkActive="navbar-link-active">Form Produk</a>
-      <a routerLink="/show" class="navbar-link" routerLinkActive="navbar-link-active">Daftar Produk</a>
-      <a routerLink="/json" class="navbar-link" routerLinkActive="navbar-link-active">JSON Example</a>
-      <!-- <a routerLink="/contact" class="navbar-link" routerLinkActive="navbar-link-active">Contact</a>
-      <a routerLink="/faq" class="navbar-link" routerLinkActive="navbar-link-active">FAQ</a> -->
+<nav class="navbar">
+  <a routerLink="/" class="navbar-link">Home</a>
+  <div class="navbar-links">
+    <a
+      routerLink="/input"
+      class="navbar-link"
+      routerLinkActive="navbar-link-active"
+      >Form Produk</a
+    >
+    <a
+      routerLink="/show"
+      class="navbar-link"
+      routerLinkActive="navbar-link-active"
+      >Daftar Produk</a
+    >
+    <a
+      routerLink="/json"
+      class="navbar-link"
+      routerLinkActive="navbar-link-active"
+      >JSON Example</a
+    >
+  </div>
+  <div class="navbar-dropdown">
+    <button class="navbar-dropdown-btn">Account</button>
+    <div class="navbar-dropdown-content">
+      <a *ngIf="isLoggedIn()" routerLink="/login" class="navbar-dropdown-link">Logout</a>
+      <a *ngIf="!isLoggedIn()" routerLink="/login" class="navbar-dropdown-link">Login</a>
+      <a *ngIf="!isLoggedIn()" routerLink="/register" class="navbar-dropdown-link">Register</a>
     </div>
-  </nav>
-  
+  </div>
+</nav>

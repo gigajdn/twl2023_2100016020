@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductInputService {
-  private apiUrl = 'https://5cac-180-242-110-41.ngrok-free.app/api/products';
+  private apiUrl = 'http://localhost:3000/api/products';
 
   constructor(private http: HttpClient) {}
 

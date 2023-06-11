@@ -13,15 +13,19 @@ import { MatDialogModule } from '@angular/material/dialog';
 // import { HomepageComponent } from './homepage/homepage.component';
 // import { HomepageModule } from './homepage/homepage.module';
 import { TopComponent } from './nav/top/top.component';
-import { ExampleComponent } from './homepage/example/example.component';
 import { RegistrasiComponent } from './registrasi/registrasi.component';
-import { RegistrationComponent } from './registration/registration.component';
 import { ProductInputComponent } from './product/input/product-input.component';
 import { ProductListComponent } from './product/list/product-list.component';
 import { NumberPipe } from './product/number.pipe';
 import { RupiahPipe } from './product/rupiah.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopupComponent } from './product/input/popup.component';
+import { LoginComponent } from './login/login/login.component';
+import { RegistrationComponent } from './login/registration/registration.component';
+import { AdminComponent } from './dashboard/admin/admin.component';
+import { UserComponent } from './dashboard/user/user.component';
+import { JsonComponent } from './dashboard/json/json.component';
+
 
 
 
@@ -30,7 +34,6 @@ import { PopupComponent } from './product/input/popup.component';
   declarations: [
     AppComponent,
     TopComponent,
-    ExampleComponent,
     RegistrasiComponent,
     RegistrationComponent,
     ProductInputComponent,
@@ -38,6 +41,10 @@ import { PopupComponent } from './product/input/popup.component';
     PopupComponent,
     NumberPipe,
     RupiahPipe,
+    LoginComponent,
+    AdminComponent,
+    UserComponent,
+    JsonComponent,
   ],
   imports: [
     BrowserModule,

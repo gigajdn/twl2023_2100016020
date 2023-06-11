@@ -20,11 +20,11 @@ export class ProductInputComponent {
     formData.append('quantity', this.product.quantity.toString());
     formData.append('price', this.product.price.toString());
     if (this.product.image) {
-      formData.append('image', this.product.image);
+      formData.append('productImage', this.product.image);
     }
 
     this.productService.createProduct(formData).subscribe(
-      response => {
+      (response: any) => {
         console.log('Product submitted successfully');
         // Reset the form or perform any other actions after successful submission
         this.openPopup();

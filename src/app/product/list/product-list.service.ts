@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductListService {
-  private apiUrl = 'https://5cac-180-242-110-41.ngrok-free.app/api/products';
+  private apiUrl = 'http://localhost:3000/api/products';
 
   constructor(private http: HttpClient) {}
 
@@ -14,12 +14,12 @@ export class ProductListService {
     return this.http.get<any[]>(this.apiUrl);
   }
 
-  updateProduct(product: any): Observable<any> {
-    const url = `${this.apiUrl}/${product.id}`;
-    return this.http.put<any>(url, product);
+  updateProduct(id: any, newData: any): Observable<any> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.put<any>(url, newData);
   }
 
-  deleteProduct(productId: number): Observable<any> {
+  deleteProduct(productId: string): Observable<any> {
     const url = `${this.apiUrl}/${productId}`;
     return this.http.delete<any>(url);
   }

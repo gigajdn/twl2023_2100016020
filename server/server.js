@@ -96,35 +96,33 @@ app.post("/api/products", upload.single("image"), (req, res) => {
 
 // Read all products
 app.get("/api/products", (req, res) => {
-  fs.readFile(jsonPath, "utf8", (err, jsonString) => {
+  Product.find({}, (err, products) => {
     if (err) {
       console.error(err);
-      res.status(500).json({ message: "Failed to read files" });
+      res.status(500).json({ message: "Failed to fetch products" });
     } else {
-      const files = JSON.parse(jsonString);
-      res.json(files);
+      res.json(products);
     }
   });
 });
 
 // Read a single product by ID
 app.get("/api/products/:id", (req, res) => {
-  const fileId = parseInt(req.params.id);
-  fs.readFile(jsonPath, "utf8", (err, jsonString) => {
+  const productId = req.params.id;
+  Product.findById(productId, (err, product) => {
     if (err) {
       console.error(err);
-      res.status(500).json({ message: "Failed to read the file" });
+      res.status(500).json({ message: "Failed to fetch the product" });
     } else {
-      const files = JSON.parse(jsonString);
-      const file = files.find((f) => f.id === fileId);
-      if (file) {
-        res.json(file);
+      if (product) {
+        res.json(product);
       } else {
-        res.status(404).json({ message: "File not found" });
+        res.status(404).json({ message: "Product not found" });
       }
     }
   });
 });
+
 
 // Update a product
 app.put("/api/products/:id", upload.single("image"), (req, res) => {

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/login/auth.guard';
 
 @Component({
   selector: 'app-top',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./top.component.scss']
 })
 export class TopComponent {
+  constructor(private authService: AuthService) {}
 
+  isLoggedIn(): boolean {
+    
+    return this.authService.isAuthenticated();
+  }
 }

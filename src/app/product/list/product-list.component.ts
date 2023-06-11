@@ -8,7 +8,8 @@ import { ProductListService } from './product-list.service';
 })
 export class ProductListComponent implements OnInit {
   products: any[] = [];
-  editedProduct: any = null;
+  id: string | null = null; // Track the edited product's ID
+
 
   constructor(private productService: ProductListService) {}
 
@@ -18,8 +19,8 @@ export class ProductListComponent implements OnInit {
 
   getProducts() {
     this.productService.getProducts().subscribe(
-      response => {
-        this.products = response;
+      (response: any) => {
+        this.products = response.products;
       },
       error => {
         console.log('Error getting products:', error);
@@ -28,25 +29,24 @@ export class ProductListComponent implements OnInit {
   }
 
   editProduct(product: any) {
-    this.editedProduct = { ...product }; // Create a copy of the product for editing
-    console.log(product);
-    console.log(this.editedProduct);
+    this.id = product._id; // Set the edited product's ID
+    // console.log(product._id);
   }
 
   cancelEdit() {
-    this.editedProduct = null; // Clear the editedProduct variable to cancel editing
+    this.id = null; // Clear the editedProduct variable to cancel editing
   }
 
   saveProduct(product: any) {
-    this.productService.updateProduct(product).subscribe(
+    this.productService.updateProduct(this.id, product).subscribe(
       updatedProduct => {
         // Find the edited product in the products array and update its data
-        const index = this.products.findIndex(p => p.id === updatedProduct.id);
+        const index = this.products.findIndex(p => p._id === updatedProduct._id);
         if (index !== -1) {
           this.products[index] = updatedProduct;
           console.log('Product updated:', updatedProduct);
         }
-        this.editedProduct = null; // Clear the editedProduct variable after saving
+        this.id = null; // Clear the editedProduct variable after saving
       },
       error => {
         console.log('Error updating product:', error);
@@ -55,11 +55,10 @@ export class ProductListComponent implements OnInit {
   }
 
   deleteProduct(product: any) {
-    this.productService.deleteProduct(product.id).subscribe(
+    this.productService.deleteProduct(product._id).subscribe(
       () => {
         // Remove the deleted product from the list
-        this.products = this.products.filter(p => p.id !== product.id);
-        this.getProducts();
+        this.products = this.products.filter(p => p._id !== product._id);
         console.log('Product deleted:', product);
       },
       error => {

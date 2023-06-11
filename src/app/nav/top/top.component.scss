@@ -1,45 +1,68 @@
-// variabel warna
-$nav-color: #2ec598;
-$nav-link-color: #fff;
-$nav-link-hover-color: #ccc;
+// Muted Color Palette
+$color-primary: #7f8c8d; // Primary color
+$color-secondary: #95a5a6; // Secondary color
+$color-bg: #f2f2f2; // Background color
+$color-link: #333; // Link color
+$color-dropdown-bg: #f9f9f9; // Dropdown background color
 
-// styling untuk top navbar
 .navbar {
-  background-color: $nav-color;
-  height: 50px;
+  background-color: $color-bg;
+  padding: 10px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-}
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
 
-// styling untuk menu link
-.navbar-link {
-  color: $nav-link-color;
-  text-decoration: none;
-  margin-right: 50px;
-  font-size: 18px;
-  &:hover {
-    color: $nav-link-hover-color;
+  .navbar-link {
+    text-decoration: none;
+    color: $color-link;
+    margin-right: 10px;
+
+    &-active {
+      color: $color-primary;
+    }
   }
-}
 
-// styling untuk menu link yang aktif
-.navbar-link-active {
-  color: $nav-link-hover-color;
-  font-weight: bold;
-}
+  .navbar-links {
+    display: flex;
 
-// styling untuk menu link group
-.navbar-links {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-right: 100px;
-  
-}
+    .navbar-link {
+      margin-right: 10px;
+    }
+  }
 
-// styling untuk menu link item
-.navbar-links-item {
-  margin-left: 10px;
+  .navbar-dropdown {
+    position: relative;
+    display: inline-block;
+
+    .navbar-dropdown-btn {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .navbar-dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: $color-dropdown-bg;
+      min-width: 120px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+
+      a {
+        color: $color-link;
+        padding: 8px 12px;
+        display: block;
+        text-decoration: none;
+      }
+    }
+
+    &:hover {
+      .navbar-dropdown-content {
+        display: block;
+      }
+    }
+  }
 }
